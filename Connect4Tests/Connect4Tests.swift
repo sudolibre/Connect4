@@ -11,26 +11,53 @@ import XCTest
 
 class Connect4Tests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testAvailablePlaces() {
+        let testBoard = Board()
+        testBoard.places[0] = Array(repeating: Board.Disc.red, count: 6)
+        let result = testBoard.availableColumns
+        let expected = [1, 2, 3, 4, 5, 6]
+        XCTAssertTrue(result == expected)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testDropDisc() {
+        let testBoard = Board()
+        testBoard.dropDisc(column: 0)
+        XCTAssert(testBoard.places[0][0] == .red)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCurrentDisc() {
+        let testBoard = Board()
+        testBoard.dropDisc(column: 0)
+        XCTAssert(testBoard.currentDisc == .yellow)
+        testBoard.dropDisc(column: 2)
+        XCTAssert(testBoard.currentDisc == .red)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testWinnerRed() {
+        let testBoard = Board()
+        testBoard.dropDisc(column: 0)
+        testBoard.dropDisc(column: 0)
+        testBoard.dropDisc(column: 1)
+        testBoard.dropDisc(column: 1)
+        testBoard.dropDisc(column: 2)
+        testBoard.dropDisc(column: 2)
+        testBoard.dropDisc(column: 3)
+        XCTAssert(testBoard.winner == .red)
     }
     
+    func testWinnerYellow() {
+        let testBoard = Board()
+        testBoard.dropDisc(column: 0)
+        testBoard.dropDisc(column: 1)
+        testBoard.dropDisc(column: 1)
+        testBoard.dropDisc(column: 2)
+        testBoard.dropDisc(column: 2)
+        testBoard.dropDisc(column: 3)
+        testBoard.dropDisc(column: 3)
+        testBoard.dropDisc(column: 4)
+        testBoard.dropDisc(column: 4)
+        XCTAssert(testBoard.winner == .yellow)
+    }
+    
+
 }

@@ -14,6 +14,8 @@
 		E85A90511E1D78D3009FF4F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85A904F1E1D78D3009FF4F2 /* LaunchScreen.storyboard */; };
 		E85A905C1E1D78D4009FF4F2 /* Connect4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A905B1E1D78D4009FF4F2 /* Connect4Tests.swift */; };
 		E85A90671E1D78D4009FF4F2 /* Connect4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A90661E1D78D4009FF4F2 /* Connect4UITests.swift */; };
+		E85A90751E1D78FE009FF4F2 /* BoardA.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A90741E1D78FE009FF4F2 /* BoardA.swift */; };
+		E85A90771E1D7A22009FF4F2 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A90761E1D7A22009FF4F2 /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		E85A90621E1D78D4009FF4F2 /* Connect4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Connect4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85A90661E1D78D4009FF4F2 /* Connect4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connect4UITests.swift; sourceTree = "<group>"; };
 		E85A90681E1D78D4009FF4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E85A90741E1D78FE009FF4F2 /* BoardA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardA.swift; sourceTree = "<group>"; };
+		E85A90761E1D7A22009FF4F2 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		E85A90451E1D78D3009FF4F2 /* Connect4 */ = {
 			isa = PBXGroup;
 			children = (
+				E85A90741E1D78FE009FF4F2 /* BoardA.swift */,
+				E85A90761E1D7A22009FF4F2 /* Board.swift */,
 				E85A90461E1D78D3009FF4F2 /* AppDelegate.swift */,
 				E85A90481E1D78D3009FF4F2 /* ViewController.swift */,
 				E85A904A1E1D78D3009FF4F2 /* Main.storyboard */,
@@ -261,6 +267,8 @@
 			files = (
 				E85A90491E1D78D3009FF4F2 /* ViewController.swift in Sources */,
 				E85A90471E1D78D3009FF4F2 /* AppDelegate.swift in Sources */,
+				E85A90771E1D7A22009FF4F2 /* Board.swift in Sources */,
+				E85A90751E1D78FE009FF4F2 /* BoardA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
